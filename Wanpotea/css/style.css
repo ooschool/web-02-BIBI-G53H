@@ -497,6 +497,98 @@ a{
   line-height: 1.5;
   color: black;
 }
+
+/* fullpage-menu */
+.fullpage-menu{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: fixed;
+  right: 13%;
+  top: 75%;
+  z-index: 400;
+}
+.fullpage-menu .menu-item a{
+  display: block;
+  position: relative;
+  margin-bottom: 6px;
+  padding-bottom: 15px;
+}
+.fullpage-menu .menu-item a::after{
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -4px;
+  bottom: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+#fullpage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#fullpage .fresh-pic-1{
+  background-image: url(../images/fresh-pic-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#fullpage .fresh-pic-2{
+  background-image: url(../images/fresh-pic-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#fullpage .fresh-pic-3{
+  background-image: url(../images/fresh-pic-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#fullpage .fresh-pic-4{
+  background-image: url(../images/fresh-pic-4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#fullpage .fresh-pic-5{
+  background-image: url(../images/fresh-pic-5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.test{
+  height: 100vh;
+}
+.title-area{
+  position: absolute;
+  max-width: 366px;
+  left: 58%;
+  top: 25%;
+}
+.num{
+  position: absolute;
+  font-weight: 700;
+  font-size: 52px;
+  letter-spacing: 3px;
+  color: rgb(0, 0, 0);
+  left: 52%;
+  top: 25%;
+}
+.title-area .title{
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 25px;
+}
+.title-area .content{
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  color: rgb(35, 24, 21);
+}
 /* ---------------------- *\
   Utility
 \* ---------------------- */
@@ -517,8 +609,6 @@ a{
 .align-bottom{
   align-items: flex-end;
 }
-
-.test{
-  background-color: #FFF;
-  height: 500px;
+.fp-watermark{
+  display: none !important;
 }
