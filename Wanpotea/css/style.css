@@ -23,7 +23,7 @@
   position: relative;
 }
 html,body{
-  font-family: 'arial';
+  /* font-family: 'arial'; */
 }
 h1,h2,h3,h4,h5,h6,p{
   margin: 0;
@@ -560,13 +560,13 @@ a{
 .test{
   height: 100vh;
 }
-.title-area{
+#fullpage .title-area{
   position: absolute;
   max-width: 366px;
   left: 58%;
   top: 25%;
 }
-.num{
+#fullpage .num{
   position: absolute;
   font-weight: 700;
   font-size: 52px;
@@ -575,14 +575,14 @@ a{
   left: 52%;
   top: 25%;
 }
-.title-area .title{
+#fullpage .title-area .title{
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 4px;
   color: rgb(0, 0, 0);
   margin-bottom: 25px;
 }
-.title-area .content{
+#fullpage .title-area .content{
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 1px;
