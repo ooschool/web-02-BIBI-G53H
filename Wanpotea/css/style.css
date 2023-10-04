@@ -162,14 +162,12 @@ a{
 }
 /* navbar */
 .navbar{
-  position: absolute;
+  /* position: absolute; */
   height: 86px;
   width: 100%;
   z-index: 800;
-  padding-left: 450px;
-  padding-top: 20px;
 }
-@media screen and (max-width: 1600px){
+/* @media screen and (max-width: 1600px){
   .navbar{
     padding-left: 350px;
   }
@@ -178,7 +176,7 @@ a{
   .navbar{
     padding-left: 300px;
   }
-}
+} */
 @media screen and (max-width: 1025px){
   .navbar{
     display: none;
@@ -192,7 +190,6 @@ a{
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 36px;
-  margin-left: 110px;
 }
 @media screen and (max-width: 1600px){
   .navbar .brand-2 img{
@@ -213,6 +210,8 @@ a{
 .navbar .nav{
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 46px 0;
 }
 .navbar .nav ul{
   display: flex;
@@ -251,10 +250,16 @@ a{
     margin-right: 0px;
   }
 }
-.nav .menu-toggle-area{
+.menu-toggle-area{
   display: flex;
   align-items: center;
-  /* padding-right: 100px; */
+  justify-content: flex-end;
+  bottom: 80px;
+  right: 100px;
+}
+.popup-navbar .menu-toggle-area{
+  bottom: 0;
+  right: 0;
 }
 .navbar .nav .menu-toggle img{
   width: 40px;
@@ -266,6 +271,8 @@ a{
   position: fixed;
   width: 100%;
   background-color: #000;
+  top: 0;
+  left: 0;
   z-index: 400;
   display: flex;
   transition: all .6s;
@@ -321,16 +328,49 @@ a{
 }
 .popup-navbar .nav .menu-toggle-area{
   display: flex;
-  align-items: center;
+  
 }
 .popup-navbar .nav .menu-toggle img{
   width: 35px;
   height: 35px;
 }
+.popup-navbar .brand_logo{
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 100px;
+  z-index: 400;
+}
+
+/* mobile-topmenuWrap */
+.mobile-topmenuWrap{
+  background-color: #FFF;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 49;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  display: none;
+}
+@media screen and (max-width: 1025px){
+  .mobile-topmenuWrap{
+    display: flex;
+  }
+}
+.mobile-topmenuWrap .logo img{
+  width: 177px;
+  height: 40px;
+}
+.mobile-topmenuWrap .hamburger img{
+  width: 36px;
+  height: 36px;
+}
 /* announcementWrap */
 .announcementWrap .container{
-  padding-right: 195px;
-  padding-left: 195px;
+  padding-right: 250px;
+  padding-left: 250px;
 }
 @media screen and (max-width: 1600px){
   .announcementWrap .container{
@@ -355,20 +395,14 @@ a{
 }
 .brand{
   position: absolute;
-  margin-top: 35px;
-  margin-left: 100px;
-  z-index: 400;
-}
-@media screen and (max-width: 1600px){
-  .brand{
-    margin-top: 20px;
-    margin-left: 50px;
-  }
+  z-index: 450;
 }
 .brand img{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  bottom: 55px;
+  left: 85px;
 }
 @media screen and (max-width: 1600px){
   .brand img{
@@ -384,8 +418,6 @@ a{
   min-width: 866.42px;
   height: auto;
   max-width: 100%;
-  padding-top: 65px;
-  padding-left: 20px;
 }
 @media screen and (max-width: 1600px){
   .announcementWrap .pic-area img{
@@ -604,7 +636,7 @@ a{
 }
 .announcementWrap .WANPO_NEWS .cat{
   font-weight: 500;
-  font-size: 13px;
+  font-size: 13px;    
   letter-spacing: 2px;
   color: #231815;
   margin-bottom: 6px;
