@@ -162,7 +162,7 @@ a{
 }
 /* navbar */
 .navbar{
-  /* position: absolute; */
+  position: absolute;
   height: 86px;
   width: 100%;
   z-index: 800;
@@ -208,10 +208,8 @@ a{
   }
 }
 .navbar .nav{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 46px 0;
+  z-index: 800;
 }
 .navbar .nav ul{
   display: flex;
@@ -401,7 +399,7 @@ a{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  bottom: 55px;
+  top: 30px;
   left: 85px;
 }
 @media screen and (max-width: 1600px){
