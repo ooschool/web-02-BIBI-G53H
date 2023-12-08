@@ -210,11 +210,11 @@ a{
 }
 .navbar .nav{
   padding: 46px 0;
-  z-index: 800;
-}
-.navbar .nav ul{
   display: flex;
   justify-content: center;
+}
+.navbar .nav ul{
+  z-index: 800;
 }
 @media screen and (max-width: 1025px){
   .navbar .nav ul{
@@ -264,6 +264,91 @@ a{
   width: 40px;
   height: 40px;
 }
+
+/* fixmenuWrap */
+.fixmenuWrap{
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 1.5s;
+  opacity: 0;
+}
+.fixmenuWrap.active{
+  opacity: 1;
+  z-index: 999;
+}
+.fixmenuWrap .fixmenu-container{
+  position: fixed;
+  width: 1583px;
+  height: 747px;
+  top: 88px;
+  bottom: 88px;
+  left: 160px;
+  right: 160px;
+  border: 2px solid rgba(4,0,0,0.5);
+  background: url(../images/fixmenu-bg.svg) center 28%/87% auto no-repeat;;
+}
+.fixmenuWrap .fixmenu-container .close{
+  position: absolute;
+  top: 38px;
+  right: 46px;
+  cursor: pointer;
+}
+.fixmenuWrap .menuList{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  writing-mode: vertical-rl;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #2f2725;
+  margin-top: 26vh;
+}
+.fixmenuWrap .menuList a{
+  margin: 0 64px;
+  display: block;
+  position: relative;
+}
+.fixmenuWrap .fixmenu-container .footer-area{
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.fixmenuWrap .fixmenu-container .footer-area .logo{
+  margin-right: 62px;
+}
+.fixmenuWrap .fixmenu-container .footer-area .info{
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  color: #000;
+  margin-right: 38px;
+  position: relative;
+}
+.fixmenuWrap .fixmenu-container .footer-area .info .tel{
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.fixmenuWrap .fixmenu-container .footer-area .shareList .blank{
+  margin-right: 26px;
+}
+.fixmenuWrap .fixmenu-container .footer-area .shareList .blank:last-child{
+  margin-right: 0px;
+}
 /* popup-navbar */
 .popup-navbar{
   height: 80px;
@@ -309,6 +394,7 @@ a{
 .popup-navbar .nav ul{
   display: flex;
   padding-left: 180px;
+  padding-top: 20px;
 }
 .popup-navbar .nav .nav-item{
   display: inline-block;
@@ -332,7 +418,8 @@ a{
 }
 .popup-navbar .nav .menu-toggle-area{
   display: flex;
-  
+  padding-top: 15px;
+  z-index: 999;
 }
 .popup-navbar .nav .menu-toggle img{
   width: 35px;
@@ -1104,3 +1191,5 @@ a{
 .fp-watermark{
   display: none !important;
 }
+
+
