@@ -43,7 +43,7 @@
                             <a href="" class="brand-2">
                                 <img src="images/islandtea.svg" alt="">
                             </a>
-                            <a href="" class="menu-toggle">
+                            <a href="#!" class="menu-toggle">
                                 <img src="images/menu-toggle.svg" alt="">
                             </a>
                         </div>
@@ -99,6 +99,49 @@
                 </div>
             </div>
         </header>
+        <!-- Start fixmenuWrap -->
+        <div class="fixmenuWrap">
+            <div class="fixmenu-container">
+                <div class="close">
+                    <img src="images/fixmenu-close.svg" alt="">
+                </div>
+                <nav class="menuList">
+                    <a href="">HOME.</a>
+                    <a href="">NEWS.</a>
+                    <a href="">STORY.</a>
+                    <a href="">FRESH.</a>
+                    <a href="">DRINKS.</a>
+                    <a href="">STORE.</a>
+                    <a href="">SHOP.</a>
+                    <a href="">CONTACT.</a>
+                </nav>
+                <div class="footer-area">
+                    <div class="logo">
+                        <a href="">
+                            <img src="images/logo-2-black.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="info">
+				        安谷國際股份有限公司<br>
+                        AIM GOOD International Co.,LTD<br>
+                        版權所有 © 2019 AIM GOOD International All Rights Reserved
+                        <div class="tel">Tel. 0800-666-155</div>
+                    </div>
+                    <div class="shareList">
+                        <a href="#!" class="blank">
+                            <i class="fa-brands fa-instagram fa-xl"></i>
+                        </a>
+                        <a href="#!" class="blank">
+                            <i class="fa-brands fa-facebook fa-xl"></i>
+                        </a>
+                        <a href="#!" class="blank">
+                            <i class="fa-brands fa-line fa-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End fixmenuWrap -->
         <!-- End header -->
 
         <!-- Start main -->
@@ -281,11 +324,21 @@ $(window).scroll(function(){
     scrolledPx = $(this).scrollTop();
     if (scrolledPx >= 400){
         $('.popup-navbar').addClass('active');
-        // $('.mobile-topmenuWrap-white').addClass('active');
     } else {
         $('.popup-navbar').removeClass('active');
-        // $('.mobile-topmenuWrap-white').removeClass('active');
     }
+
+   
+})
+
+$('.menu-toggle').on('click', function(){
+    $(this).toggleClass('active');
+    $('.fixmenuWrap').toggleClass('active');
+})
+
+$('.close').on('click', function(){
+    $(this).toggleClass('active');
+    $('.fixmenuWrap').toggleClass('active');
 })
 </script>
 </html>
