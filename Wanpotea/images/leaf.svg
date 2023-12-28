@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.57" height="49.14" viewBox="0 0 19.57 49.14">
+  <title>leaf</title>
+  <g id="圖層_2" data-name="圖層 2">
+    <g id="圖層_1-2" data-name="圖層 1">
+      <g>
+        <path d="M9.79,41l-.66-.56A26.32,26.32,0,0,1,9.13.56L9.79,0l.65.56a26.35,26.35,0,0,1,9.13,19.93,26.35,26.35,0,0,1-9.13,19.93Zm0-38.32a24.3,24.3,0,0,0,0,35.66,24.35,24.35,0,0,0,7.78-17.83A24.32,24.32,0,0,0,9.79,2.66Z" fill="#fff"/>
+        <rect x="8.79" y="1.32" width="2" height="47.81" fill="#fff"/>
+        <rect x="4.83" y="10.29" width="2" height="11.18" transform="translate(-9.52 8.78) rotate(-45)" fill="#fff"/>
+        <rect x="7.95" y="21.25" width="12.54" height="2" transform="translate(-11.57 16.57) rotate(-45)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
