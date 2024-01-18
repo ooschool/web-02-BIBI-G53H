@@ -148,16 +148,39 @@
         <!-- End header -->
 
         <!-- Start main -->
-        <Section class="main">
+        <Section>
             <!-- Start jumbotron -->
-            <div class="jumbotron">
-                <div class="jumbotron-2">
-                    <div class="container">
-                        <div class="lemon">
-                            <img src="images/lemon.png" alt="">
+            <div class="index-bannerWrap">
+                <div id="scene" class="scene">
+                    <div data-depth="0.08" class="layer">
+                        <div class="bg">
+                            <img src="images/background.png">
                         </div>
-                        <div class="scrolldown">
-                            <img src="images/idnex-scrolldown.svg" alt="">
+                    </div>
+                    <div data-depth="0.1" class="layer">
+                        <div class="bg2">
+                            <img src="images/background-2.png">
+                        </div>
+                    </div>	
+                    
+                    <div data-depth="0.12" class="layer">
+                        <div  class="woman">
+                            <img src="images/index-banner-3.png">
+                        </div>
+                    </div>
+                    <div data-depth="0.33" class="layer">
+                        <div  class="man">
+                            <img src="images/index-banner-4.png">
+                        </div>
+                    </div>
+                    <div data-depth="0.18" class="layer">
+                        <div  class="happy">
+                            <img src="images/index-banner-5.png">
+                        </div>
+                    </div>
+                    <div data-depth="-0.16" class="layer">
+                        <div class="drink">
+                            <img src="images/index-banner-drink2.png">
                         </div>
                     </div>
                 </div>
@@ -187,7 +210,8 @@
             <!-- End storyWrap -->
             <!-- Start fullWrap-->
             <div class="index-fullWrap">
-                <div class="parallaxbg">
+                <div class="rellax parallaxbg" data-rellax-speed="-4">
+                    <!-- <img class="rellax" src="images/home-banner2.png" alt=""  data-rellax-speed="-3"> -->
                 </div>
             </div>
             <!-- End fullWrap -->
@@ -264,9 +288,9 @@
             <ul class="persistList">
                 <li class="grid-x align-center article-area">
                     <div class="large-auto">
-                        <div class="num">01</div>
-                        <div class="title">QUALITY / 品質</div>
-                        <div class="content">
+                        <div class="num js-fadeInRight">01</div>
+                        <div class="title js-fadeInRight">QUALITY / 品質</div>
+                        <div class="content js-fadeInRight">
                             萬波每一步都堅持從茶園到茶店產地直送。從摘選，焙茶，補火，煮製，釋放難得一見的經典茶香，萬波將40 年代的匠人精神發揮在手搖茶店中。對於萬波來說，遵循古法「煮茶」才能詮釋真正的茶的美學，掌握特性與適當的沖泡手法，並讓精挑細選的配料建築在古早味之中，突顯出不同茶品其獨特的口感與香氣。
                         </div>
                     </div>
@@ -282,9 +306,9 @@
                 <li class="grid-x align-center article-area">
                     <div class="pic-area" style="background: url(images/persist-2.jpg) center center / cover no-repeat;"></div>
                     <div class="large-auto">
-                        <div class="num">02</div>
-                        <div class="title">SERVICE / 服務</div>
-                        <div class="content">
+                        <div class="num js-fadeInRight">02</div>
+                        <div class="title js-fadeInRight">SERVICE / 服務</div>
+                        <div class="content js-fadeInRight">
                             一個美好的體驗－萬波會從親切的招呼顧客開始，並且專業的為顧客做菜單介紹，透過乾淨明亮的玻璃能夠看到店員製作飲料的過程，拿到飲料後我們會說聲小心拿和路上小心，希望顧客能有在家一樣的氛圍，在這樣繁忙的生活裡頭，能夠得到一點點放鬆的時光。
                         </div>
                         <div class="deco">
@@ -294,9 +318,9 @@
                 </li>
                 <li class="grid-x align-center">
                     <div class="article-area large-auto">
-                        <div class="num">03</div>
-                        <div class="title">TEAMWORK / 團隊</div>
-                        <div class="content">
+                        <div class="num js-fadeInRight">03</div>
+                        <div class="title js-fadeInRight">TEAMWORK / 團隊</div>
+                        <div class="content js-fadeInRight">
                             萬波是一個專業且擁有很多想法的團隊，我們致力把生活中的故事分享給消費者－關於台灣眷村。古早味飲品是大多數人的回憶，因此能讓更多人輕易地去連結這段即將逝去的歷史。萬波的團隊互相激盪出新策略、評估可能性、有著因應潮流的彈性以及貫徹的執行力，使團隊成為最有效能的後勤支援，立志做出最台灣味的眷村飲品。
                         </div>
                     </div>
@@ -451,7 +475,11 @@
 <!-- JS -->
 <script src="https://kit.fontawesome.com/aaf75dbfe4.js" crossorigin="anonymous"></script>
 <script src="vendor/jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
+<script src="vendor/parallax-master/parallax.min.js"></script>
+<script src="vendor/rellax/rellax.min.js"></script>
+<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
 <script>
+
     $(window).scroll(function(){
         scrolledPx = $(this).scrollTop();
         if (scrolledPx >= 400){
@@ -459,8 +487,6 @@
         } else {
             $('.popup-navbar').removeClass('active');
         }
-    
-       
     })
     
     $('.menu-toggle').on('click', function(){
@@ -472,5 +498,58 @@
         $(this).toggleClass('active');
         $('.fixmenuWrap').toggleClass('active');
     })
+    
+    var rellax = new Rellax('.rellax', {
+		center: true
+	});
+    
+    var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+
+	// document.getElementById('deleteme').onclick = function() {
+	// 	parallax.destroy();
+	// 	parallax = null;
+	// 	hoverOnly = true;
+
+	// 	this.onclick = null;
+	// 	this.style.display = 'none';
+		
+	// };
+
+    ScrollReveal().reveal('.js-fadeInRight',{
+        origin: 'right',
+        distance: '500px',
+        // delay: 0.1,
+        duration: 2500,
+        scale: 0.25
+    });
+
+    
+    ScrollReveal().reveal('.pic-area',{
+        // origin: 'bottom',
+        // distance: '100px',
+        delay: 300,
+        duration: 2500,
+        scale: 0.25
+    });
+
+    ScrollReveal().reveal('.deco-1',{
+        origin: 'left',
+        distance: '100px',
+        // delay: 0.1,
+        duration: 2500,
+        scale: 0.25
+    });
+
+    ScrollReveal().reveal('.deco-2, .deco',{
+        origin: 'right',
+        distance: '100px',
+        // delay: 0.1,
+        duration: 2500,
+        scale: 0.25
+    });
+    
+
+
 </script>
 </html>
